@@ -25,9 +25,9 @@ class ProductDescription extends Component {
     return (
       <div className="vtex-product-description flex-l">
         <div className="w-100 w-60-l">
-          <div className="t-heading-5 mb5">
-            <FormattedMessage id="product-description.title" />
-          </div>
+          <FormattedMessage id="product-description.title">
+            {(txt) => (<h2 className="t-heading-5 mb5 mt0">{txt}</h2>)}
+          </FormattedMessage>
 
           <div className="c-muted-1">
             <GradientCollapse collapseHeight={220}>
@@ -37,9 +37,11 @@ class ProductDescription extends Component {
         </div>
         {specifications.length > 0 && (
           <div className="vtex-product-specifications mt9 mt0-l w-100 w-40-l pl8-l">
-            <div className="vtex-product-specifications__title t-heading-5 mb5">
-              <FormattedMessage id="technicalspecifications.title" />
-            </div>
+            <FormattedMessage id="technicalspecifications.title">
+              {(txt) => (
+                <h2 className="vtex-product-specifications__title t-heading-5 mb5 mt0">{txt}</h2>
+              )}
+            </FormattedMessage>
             <GradientCollapse collapseHeight={220}>
               <table className="vtex-product-specifications__table w-100 bg-base border-collapse">
                 <thead>
