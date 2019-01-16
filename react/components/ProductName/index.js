@@ -97,9 +97,9 @@ class ProductName extends Component {
 
     return (
       <div className={`${productName.container} ${className}`}>
-        <span className={`${productName.brand} ${brandNameClass}`}>
+        <h1 className={`${productName.brand} ${brandNameClass} mv0`}>
           {name} {showBrandName && brandName && `- ${brandName}`}
-        </span>
+        </h1>
         {showSku && skuName && (
           <span className={`${productName.sku} ${skuNameClass}`}>{skuName}</span>
         )}
