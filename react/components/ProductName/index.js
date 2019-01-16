@@ -96,10 +96,10 @@ class ProductName extends Component {
     }
 
     return (
-      <div className={`${productName.container} ${className}`}>
-        <h1 className={`${productName.brand} ${brandNameClass} mv0`}>
+      <h1 className={`${productName.container} ${className} mv0`}>
+        <span className={`${productName.brand} ${brandNameClass}`}>
           {name} {showBrandName && brandName && `- ${brandName}`}
-        </h1>
+        </span>
         {showSku && skuName && (
           <span className={`${productName.sku} ${skuNameClass}`}>{skuName}</span>
         )}
@@ -108,7 +108,7 @@ class ProductName extends Component {
             {`REF: ${productReference}`}
           </span>
         )}
-      </div>
+      </h1>
     )
   }
 }
